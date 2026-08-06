@@ -207,6 +207,12 @@ void __Int_Motor_Move_Stop(void)
 void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
 {
 
+    if (htim->Instance != TIM2)
+    {
+        return;
+        /* code */
+    }
+
     // 圈数运行
     if (motor_para.state == MOTOR_STATE_REVOLUTION_RUN)
     {
