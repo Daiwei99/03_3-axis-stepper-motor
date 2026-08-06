@@ -1,0 +1,32 @@
+# ---- Keil MDK-ARM 编译产物 ----
+# 每个工程 MDK-ARM 下与工程同名的输出目录，里面全是 .o/.crf/.d/.axf/.hex/.map 等，
+# 靠下面的扩展名规则整个清空、不进 git；source/ RTE/ 源码与配置则保留。
+
+# 单个编译/临时产物
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.htm
+*.build_log.htm
+*.lnp
+*.dep
+*.i
+*.iex
+*.sct
+*.scvd
+
+# Keil 用户界面/临时状态文件
+*.uvguix.*
+*.uvoptx
+DebugConfig/
+
+# ---- 通用 ----
+*.bak
+*.tmp
+Thumbs.db
+.DS_Store
