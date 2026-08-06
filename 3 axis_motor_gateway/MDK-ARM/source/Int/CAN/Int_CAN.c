@@ -19,8 +19,9 @@ void Int_CAN_Init(void)
     can_filter_config.FilterMaskIdLow = 0;
     can_filter_config.FilterScale = CAN_FILTERSCALE_32BIT; // ID位宽
     HAL_CAN_ConfigFilter(&hcan, &can_filter_config);
-    // CAN通信需要启动
+    // CAN通信必须启动
     HAL_CAN_Start(&hcan);
+
 }
 
 //!============================================================================================================================================
